@@ -39,3 +39,5 @@ $ rails server
 
 For more information, see the
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
+
+1cc6ff3e99652c75d2a9472e012139bf19ebfd90
