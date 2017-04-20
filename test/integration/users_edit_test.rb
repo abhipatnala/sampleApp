@@ -32,3 +32,4 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   end
   
 end
+
