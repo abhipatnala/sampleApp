@@ -3,6 +3,13 @@
 
 /* mixins, variables, etc. */
 
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 $gray-medium-light: #eaeaea;
 
 /* universal */
@@ -96,13 +103,6 @@ footer {
     }
   }
 }
-$gray-medium-light: #eaeaea;
-
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
-}
 
 .debug_dump {
   clear: both;
@@ -111,6 +111,8 @@ $gray-medium-light: #eaeaea;
   margin-top: 45px;
   @include box_sizing;
 }
+
+/* sidebar */
 
 aside {
   section.user_info {
@@ -147,6 +149,8 @@ aside {
   margin-top: 15px;
 }
 
+/* forms */
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -157,6 +161,7 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
 #error_explanation {
   color: red;
   ul {
@@ -171,6 +176,7 @@ input {
     color: $state-danger-text;
   }
 }
+
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
@@ -184,6 +190,9 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+/* Users index */
+
 .users {
   list-style: none;
   margin: 0;
@@ -193,6 +202,8 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+/* microposts */
 
 .microposts {
   list-style: none;
@@ -238,6 +249,7 @@ span.picture {
     border: 0;
   }
 }
+
 .gravatar {
   float: left;
   margin-right: 10px;

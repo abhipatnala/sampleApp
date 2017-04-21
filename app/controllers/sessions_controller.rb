@@ -17,18 +17,14 @@ class SessionsController < ApplicationController
         redirect_to root_url
       end
     else
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = 'Invalid email/password combination' # Not quite right!
       render 'new'
     end
   end
-def home
-    if logged_in?
-      @micropost  = current_user.microposts.build
-      @feed_items = current_user.feed.paginate(page: params[:page])
-    end
-  end
+
   def destroy
-    log_out if logged_in?
+  	log_out if logged_in?
     redirect_to root_url
   end
 end
+
